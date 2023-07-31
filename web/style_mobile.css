@@ -1,0 +1,543 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 400;
+}
+
+.color-box {
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.popup.active {
+    transition: 1s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*===== top =====*/
+#top {
+    position: relative;
+}
+
+#top-icon {
+    height: auto;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+#black-box {
+    width: 75%;
+    height: 625px;
+    background-color: #242424;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#orange {
+    background-color: #FFD610;
+    width: 55px;
+    border-radius: 10px 0 0 10px;
+    height: 55px;
+    right: 0;
+    position: absolute;
+}
+
+#main-img {
+    width: 75%;
+    height: 580px;
+    object-fit: cover;
+    object-position: 70% 50%;
+    position: relative;
+}
+
+#top-cont {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 14rem;
+    right: 2.5rem;
+    color: white;
+}
+
+#top-cont h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-align: end;
+    line-height: 1.1;
+}
+
+#top-cont p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    text-align: end;
+}
+
+/*===== service =====*/
+#service {
+    margin-top: 125px;
+    position: relative;
+}
+
+#grary {
+    background-color: #e8e8e8;
+    width: 100vw;
+    height: 1400px;
+    position: relative;
+    top: 5rem;
+}
+
+#service #blue-shima {
+    width: 80%;
+    height: 13rem;
+    background-size: auto auto;
+    background-color: rgba(229, 248, 254, 1);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px, rgba(215, 244, 252, 1) 24px, rgba(215, 244, 252, 1) 48px);
+    margin: 0 0 0 0;
+    position: relative;
+    top: 3rem;
+}
+
+#service h2 {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 1rem;
+    top: 2.25rem;
+    font-weight: 400;
+}
+
+#service h2::before {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    content: '';
+    left: 13px;
+    width: 80%;
+    border-bottom: 7px solid #c2c2c2;
+}
+
+#service h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    left: 2rem;
+    top: 6rem;
+    position: absolute;
+}
+
+.service-item-container {
+    width: 95%;
+    height: 50vh;
+    position: absolute;
+    left: 1.5%;
+    top: 300px;
+}
+
+.service-item-container .service-item {
+    background-color: white;
+    width: 97vw;
+    height: 375px;
+}
+
+#service01 {
+    top: 15rem;
+}
+
+#service02 {
+    top: 45rem;
+}
+
+#service03 {
+    top: 75rem;
+}
+
+#service h5 {
+    color: #FFD610;
+    font-size: 3rem;
+    position: absolute;
+}
+
+#NUM01 {
+    top: 14%;
+    right: 1rem;
+    font-style: italic;
+}
+
+#NUM02 {
+    top: 43.5rem;
+    right: 1rem;
+    font-style: italic;
+}
+
+#NUM03 {
+    top: 73.5rem;
+    right: 1rem;
+    font-style: italic;
+}
+
+.orange-box {
+    background-color: #FFD610;
+    width: 75%;
+    height: 2.5rem;
+    left: -10px;
+    position: relative;
+    top: -30px;
+}
+
+.service-item h4 {
+    position: absolute;
+    top: 25%;
+    font-size: 1.25rem;
+    font-weight: 400;
+    left: 1rem;
+}
+
+
+.service-item h6 {
+    position: absolute;
+    top: 16.5rem;
+    left: 1rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.service-item h6::before {
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    content: '';
+    left: 0;
+    width: 275px;
+    height: 3px;
+    border-bottom: 1px solid #c2c2c2;
+}
+
+.service-item p {
+    position: absolute;
+    top: 19rem;
+    font-size: 1rem;
+    margin: 0.25rem 0.5rem 0 0.5rem;
+    font-feature-settings: "palt";
+}
+
+/*===== info =====*/
+#info {
+    margin-top: 200px;
+    height: 80vh;
+    position: relative;
+}
+
+#orange-shima2 {
+    background-size: auto auto;
+    background-color: rgba(255, 226, 88, 1);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px, rgba(254, 215, 13, 1) 24px, rgba(254, 215, 13, 1) 48px);
+    width: 94vw;
+    height: 22rem;
+    position: absolute;
+    left: 3%;
+}
+
+#white-box {
+    width: 90%;
+    height: 16.5rem;
+    background-color: white;
+    position: relative;
+    top: 80px;
+    left: 5%;
+    border: 0.25px solid #242424;
+}
+
+#info a {
+    color: #242424;
+}
+
+#info h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    top: -0.75rem;
+    left: 25px;
+}
+
+#info h2::before {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    content: '';
+    left: 0px;
+    width: 100%;
+    border-bottom: 7px solid #c2c2c2;
+}
+
+.info-cont {
+    position: relative;
+    font-size: 0.75rem;
+    margin: 2rem 0 0 0;
+    left: 5%;
+    top: -5%;
+    display: flex;
+    width: 80%;
+}
+
+.center {
+    position: relative;
+    top: 1rem;
+    left: 0rem;
+    margin: 0.5rem 0 2rem 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.hidari {
+    position: absolute;
+    left: 0;
+}
+
+.hidari2 {
+    position: absolute;
+    left: 5rem;
+}
+
+#botan {
+    /*コレ*/
+    position: relative;
+    border-radius: 100px;
+    border: 0.25px solid #242424;
+    display: block;
+    width: 65%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #FFD610;
+    color: #242424;
+    text-decoration: none;
+    text-align: center;
+    margin: 5% auto;
+    font-size: 1.25rem;
+}
+
+/*===== RECRUIT =====*/
+#RECRUIT {
+    margin-top: 0px;
+    position: relative;
+}
+
+#orange-shima3 {
+    background-size: auto auto;
+    background-color: rgba(255, 226, 88, 1);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px, rgba(254, 215, 13, 1) 24px, rgba(254, 215, 13, 1) 48px);
+    width: 75vw;
+    height: 20rem;
+    position: absolute;
+    top: 15rem;
+    right: 5%;
+}
+
+#blue-shima3 {
+    width: 75vw;
+    height: 15rem;
+    background-size: auto auto;
+    background-color: rgba(229, 248, 254, 1);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px, rgba(215, 244, 252, 1) 24px, rgba(215, 244, 252, 1) 48px);
+    margin: 0 0 0 0;
+    position: relative;
+    top: 6rem;
+    left: 3%;
+}
+
+#RECRUIT h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    top: 5.25rem;
+    left: 25px;
+}
+
+#RECRUIT h2::before {
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    content: '';
+    left: 0;
+    width: 128px;
+    height: 3px;
+    border-bottom: 4px solid #c2c2c2;
+}
+
+#RECRUIT img {
+    position: relative;
+    width: 100%;
+    top: -5rem;
+}
+
+#kuria {
+    width: 80vw;
+    height: 14rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 18rem;
+    left: 10%;
+}
+
+#RECRUIT h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    top: 10%;
+    line-height: 2.5rem;
+    letter-spacing: 0.1rem;
+    left: 2rem;
+}
+
+#botan2 {
+    /*コレ*/
+    position: relative;
+    border-radius: 100px;
+    border: 0.25px solid #242424;
+    display: block;
+    width: 200px;
+    padding: 13px;
+    box-sizing: border-box;
+    background: #242424;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    margin: 1rem auto;
+    top: 50%;
+    font-size: 1.25rem;
+}
+
+/*===== irai =====*/
+#irai {
+    margin-top: 50px;
+    position: relative;
+}
+
+#irai #border-sen {
+    width: 100%;
+    height: 15.5rem;
+    background-color: #242424;
+    position: absolute;
+    opacity: 0.2;
+    top: 12.5rem;
+}
+
+
+#irai img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 200px;
+    position: relative;
+}
+
+#white-box2 {
+    display: none;
+}
+
+.messe {
+    position: absolute;
+    top: 15rem;
+    left: 15%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    line-height: 2rem;
+}
+
+#botan3 {
+    /*コレ*/
+    position: relative;
+    border-radius: 100px;
+    border: 0.25px solid #242424;
+    display: block;
+    width: 15rem;
+    padding: 10px;
+    font-weight: 400;
+    box-sizing: border-box;
+    background: #FFD610;
+    color: #242424;
+    text-decoration: none;
+    text-align: center;
+    margin: 0rem auto;
+    top: -5rem;
+    font-size: 1.25rem;
+}
+
+/*===== otoi =====*/
+#otoi {
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+}
+
+#otoi img {
+    width: 125px;
+    position: absolute;
+    top: 4rem;
+    left: 8rem;
+    display: inline;
+}
+
+#otoi .otoi-cont {
+    position: relative;
+    top: 12rem;
+    left: 1rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 2rem 20px 0 0;
+    text-align: center;
+}
+
+#botan4 {
+    /*コレ*/
+    position: absolute;
+    border-radius: 100px;
+    border: 0.25px solid #242424;
+    display: block;
+    width: 150px;
+    padding: 6px;
+    font-weight: 400;
+    box-sizing: border-box;
+    background: #242424;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin: 0rem 7rem;
+    top: 17rem;
+}
+
+/*===== footer =====*/
+#orange-shima4 {
+    background-size: auto auto;
+    background-color: rgba(255, 226, 88, 1);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px, rgba(254, 215, 13, 1) 24px, rgba(254, 215, 13, 1) 48px);
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+}
+
+footer {
+    margin-top: 375px;
+    position: relative;
+    text-align: center;
+}
+
+footer p {
+    margin: 2rem;
+    font-size: 1rem;
+}

@@ -1,0 +1,583 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'BIZ UDPGothic', sans-serif;
+}
+
+.color-box {
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.popup.active {
+    transition: 1s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#white-box {
+    width: 80%;
+    height: 85%;
+    background-color: rgba(120, 120, 120, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+header {
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 5rem 0 3rem;
+    margin-top: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+}
+
+nav {
+    display: none;
+}
+
+/*===== top =====*/
+#top {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#ligth-grary {
+    background-color: rgba(14, 3, 69, 0.3);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    object-fit: cover;
+}
+
+
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+#video-area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+}
+
+video {
+    height: 100vh;
+    position: fixed;
+    z-index: -2;
+    object-fit: cover;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+#top-icon {
+    width: 15%;
+    height: auto;
+    /* position: absolute;
+    top: 15px;
+    left: 15px; */
+    z-index: 1500;
+}
+
+#top-cont {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    color: white;
+}
+
+#top-cont h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.2;
+    letter-spacing: 10%;
+}
+
+#top-cont p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: end;
+}
+
+/*====== 9-1-1 縦線が動いてスクロールを促す =======*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown1 {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    /*全体の高さ*/
+    height: 50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span {
+    /*描画位置*/
+    position: absolute;
+    left: -25px;
+    top: -15px;
+    /*テキストの形状*/
+    color: #eee;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 1px;
+    height: 30px;
+    background: #eee;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+#sen {
+    background-color: #e8e8e8;
+    width: 0.1%;
+    height: 19.5%;
+    position: relative;
+    top: 42%;
+    left: 13%;
+    border-radius: 50%;
+}
+
+#sen2 {
+    background-color: #e8e8e8;
+    width: 9%;
+    height: 0.1%;
+    position: relative;
+    top: 42%;
+    left: 13%;
+    border-radius: 50%;
+}
+
+
+/*===== service =====*/
+#about {
+    margin-top: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#about h2 {
+    font-size: 2rem;
+    position: absolute;
+    right: 15%;
+    font-weight: 400;
+    top: 10%;
+    color: #e8e8e8;
+}
+
+#about h2::before {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    border-bottom: 3px solid #c2c2c2;
+}
+
+#about h3 {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    text-align: end;
+    right: 15%;
+    margin-top: 23%;
+    z-index: 99;
+    line-height: 75px;
+    font-size: 1.2rem;
+    color: rgba(237, 237, 237, 0.6);
+}
+
+#about img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+#profile {
+    color: #e8e8e8;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+#profile-cont {
+    font-size: 1rem;
+    width: 75%;
+    margin: 0 auto;
+
+}
+
+#profile h4 {
+    font-size: 2rem;
+}
+
+/*===== skill =====*/
+#skill {
+    margin: 0 auto 10%;
+    position: relative;
+    width: 80%;
+    height: 200vh;
+}
+
+#skill h2 {
+    left: 5%;
+    font-size: 2rem;
+    position: absolute;
+    font-weight: 400;
+    color: #e8e8e8;
+}
+
+#skill h2::before {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    border-bottom: 3px solid #c2c2c2;
+}
+
+#taitoru h3 {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    left: 5%;
+    margin-top: 4%;
+    z-index: 99;
+    line-height: 75px;
+    font-size: 1.2rem;
+    color: rgba(237, 237, 237, 0.6);
+}
+
+.skill-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 10% auto 0;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.skill-item {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+#skill-sen1 {
+    background-color: #e8e8e8;
+    width: 100%;
+    height: 2%;
+    position: absolute;
+    top: 34%;
+    left: 5%;
+}
+
+#skill-sen2 {
+    background-color: #e8e8e8;
+    width: 100%;
+    height: 2%;
+    position: absolute;
+    top: 34%;
+    left: 5%;
+}
+
+#skill-sen3 {
+    background-color: #e8e8e8;
+    width: 100%;
+    height: 2%;
+    position: absolute;
+    top: 34%;
+    left: 5%;
+}
+
+#skill-sen4 {
+    background-color: #e8e8e8;
+    width: 100%;
+    height: 2%;
+    position: absolute;
+    top: 34%;
+    left: 5%;
+}
+
+.skill-item h3 {
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    left: 5%;
+    margin-bottom: 3rem;
+    z-index: 99;
+    line-height: 75px;
+    font-size: 2rem;
+    color: #e8e8e8;
+}
+
+.skill-list p {
+    color: #e8e8e8;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 1.5;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    position: absolute;
+    right: 0%;
+}
+
+.skill-tools {
+    color: #e8e8e8;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 120%;
+    right: 0%;
+}
+
+
+/*===== Work =====*/
+#Work {
+    position: relative;
+    width: 80%;
+    height: 300vh;
+    margin: 0% auto 0;
+}
+
+#Work h2 {
+    right: 5%;
+    font-size: 2rem;
+    position: absolute;
+    font-weight: 400;
+    color: #e8e8e8;
+}
+
+#Work h2::before {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    border-bottom: 3px solid #c2c2c2;
+}
+
+#Work h3 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    text-align: end;
+    right: 5%;
+    margin-top: 8%;
+    z-index: 99;
+    line-height: 75px;
+    font-size: 1.5rem;
+    color: rgba(237, 237, 237, 0.6);
+}
+
+#Work h4 {
+    color: #e8e8e8;
+    font-size: 1.5rem;
+}
+
+#spece {
+    margin-bottom: 10%;
+}
+
+#gap {
+    gap: 2rem;
+}
+
+.list {
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container {
+    width: 330px;
+    margin-top: 100px;
+}
+
+
+/*===== footer =====*/
+#back {
+    margin-top: 500px;
+    width: 100%;
+    height: 50vh;
+    background-color: #242424;
+}
+
+footer {
+    margin-top: 300px;
+    position: relative;
+    text-align: center;
+}
+
+footer p {
+    margin: 1rem;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 10%;
+    top: 70%;
+    color: #ffffff;
+}
+
+footer h4 {
+    margin: 1rem;
+    font-size: 2rem;
+    color: #e8e8e8;
+    position: absolute;
+    left: 10%;
+}
+
+.contact-link {
+    color: #242424;
+    font-size: min(5vw, 5rem);
+    font-weight: 900;
+    text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+    transition-property: color, text-shadow;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    text-decoration: none;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+#sen3 {
+    background-color: #e8e8e8;
+    width: 80%;
+    height: 0.1%;
+    position: relative;
+    top: 40%;
+    left: 10%;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+}
+
+#insta {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+}
+
+#twitter {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    position: absolute;
+    top: 50%;
+    left: 76%;
+}
+
+footer ul li svg {
+    fill: aliceblue;
+    width: 53px;
+    height: 53px;
+}
+
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+#topButton:hover {
+    background-color: #555;
+}

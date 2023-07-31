@@ -1,0 +1,130 @@
+/*========= ナビゲーションのためのCSS ===============*/
+.hamburger img {
+    width: 80%;
+    height: auto;
+    position: relative;
+}
+
+#g-nav {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: -120%;
+    width: 100%;
+    height: 100vh;
+    background: #FFD610;
+    transition: all 0.6s;
+}
+
+#g-nav.panelactive {
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li {
+    list-style: none;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+#g-nav li a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 375px) {
+    #g-nav li a {
+        font-size: 1.5rem;
+    }
+
+    #g-nav li {
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn {
+    position: absolute;
+    z-index: 9999;
+    top: -5px;
+    right: 0px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.openbtn div {
+    position: absolute;
+    top: 37px;
+    right: 14px;
+    color: #fff;
+    font-size: 0.2rem;
+}
+
+/*×に変化*/
+.openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}

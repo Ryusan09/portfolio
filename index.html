@@ -4,11 +4,204 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="stylesheet" href="style.css" media="screen and (min-width: 376px)">
+        <link rel="stylesheet" type="text/css" href="./hamburger-style.css">
+        <link rel="stylesheet" href="style_mobile.css" media="screen and (max-width: 375px)">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+        <script src="intersection.js" defer></script>
+        <title>Portfolio</title>
     </head>
 
     <body>
-        <h1>test</h1>
+        <div class="bg">
+            <div id="video-area">
+                <video id="video" src="./material/140671 (1080p).mp4" webkit-playsinline playsinline muted autoplay
+                    loop></video>
+                <div class="color-box" id="ligth-grary"></div>
+            </div>
+        </div>
+        <div class="hamburger-demo-menubox">
+            <input id="hamburger-demo7" type="checkbox" class="input-hidden">
+            <label for="hamburger-demo7" class="hamburger-demo-switch hamburger-demo-switch7">
+                <span class="hamburger-switch-separate"></span>
+            </label>
+            <div class="hamburger-demo-menuwrap hamburger-menuwrap-right">
+                <ul class="hamburger-demo-menulist hamburger-menulist-separate">
+                    <li><a href="#top">HOME</a></li>
+                    <li><a href="#profile">ABOUT</a></li>
+                    <li><a href="#skill">SKILL</a></li>
+                    <li><a href="#Work">WORKS</a></li>
+                </ul>
+            </div>
+            <div class="hamburger-demo-cover"></div>
+        </div>
+        <header>
+            <a href="./index.html">
+                <img id="top-icon" src="./material/logo-white.svg" alt="" width="40%" height="auto"></a>
+            <nav>
+                <ul>
+                    <li><a href="#top">HOME</a></li>
+                    <li><a href="#profile">ABOUT</a></li>
+                    <li><a href="#skill">SKILL</a></li>
+                    <li><a href="#Work">WORKS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="top" class="popup active">
+            <div id="top-cont">
+                <h1>My<br>Portfolio</h1>
+                <p>Ryunosuke Koketsu</p>
+            </div>
+            <div id="sen"></div>
+            <div id="sen2"></div>
+            <div class="scrolldown1"><span>Scroll</span></div>
+        </section>
+        <section id="about" class="popup">
+            <div id="white-box">
+                <div>
+                    <h2>About
+                        <h3>私について</h3>
+                    </h2>
+                </div>
+
+                <img src="./material/icon.jpg" alt="" width="100%" height="auto">
+
+                <div id="profile">
+                    <div id="profile-cont">
+                        <h4>纐纈 龍之介</h4>
+                        <p>2003年生まれ</p>
+                        <p>愛知県出身</p>
+                        <p>愛知工業大学<br>情報科学部情報科学科
+                            <br>メディア情報専攻 2年
+                        </p>
+                        <p>HTMLやCSS,C++,JAVAなどを中心に<br>コーディングについて学んでいる</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skill" class="popup">
+            <div id="taitoru">
+                <h2>Skill
+                    <h3>できること</h3>
+                </h2>
+            </div>
+            <div class="skill-contener">
+                <ol class="skill-list">
+                    <li class="skill-item">
+                        <div id="skill-sen1"></div>
+                        <h3>Web開発
+                            <p>HTML・CSSを使用し、デザインの再現を行えます。また、JavaScriptを使用してサイトに動きを加えることも可能です。よりデザインの魅力を引き出す事を意識しています。誰が見ても分かりやすいコーディングを心掛けています。
+                            </p>
+                            <span class="skill-tools"><br>Tools：Visual Studio Code</span>
+                        </h3>
+                    </li>
+                    <li class="skill-item">
+                        <div id="skill-sen2"></div>
+                        <h3>ゲーム開発
+                            <p>Unityを使用し、ゲームの開発を行えます。C#を使用して、ゲームの動きを実装することができます。ゲームの開発を通して、プログラミングの楽しさを知りました。
+                            </p>
+                            <span class="skill-tools"><br>Tools：Unity, C#</span>
+                        </h3>
+                    </li>
+                    <li class="skill-item">
+                        <div id="skill-sen3"></div>
+                        <h3>画像処理
+                            <p>C++とOpenCVを使用して、画像の読み込みや加工を行えます。画像処理の基礎を学び、画像処理の面白さを知りました。また現在はPythonによる画像処理を学んでいます。
+                            </p>
+                            <span class="skill-tools"><br>Tools：Visual Studio Code, OpenCV</span>
+                        </h3>
+                    </li>
+                    <li class="skill-item">
+                        <div id="skill-sen4"></div>
+                        <h3>デザイン＆動画制作
+                            <p>Adobe IllustratorやPhotoshopを使用して、ロゴやイラストの制作を行えます。<br>また、Adobe After EffectsやPremiere
+                                Proを使用して、動画の編集を行えます。デザインの基礎を学び、Web開発などに活かしてきました。
+                            </p>
+                            <span class="skill-tools"><br>Tools：Illustrator, Photoshop, After Effects, Premiere
+                                Pro</span>
+                        </h3>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="Work" class="popup">
+            <div id="spece">
+                <h2>Works
+                    <h3>制作物</h3>
+                </h2>
+            </div>
+            <div class="list">
+                <div class="container" id="service01">
+                    <a href="./Bottle/Bottle.html">
+                        <img src="./material/TGS2022.png" alt="Bottle Bullet" width="100%" height="auto"></a>
+                    <h4>ペットボトルを使用したゲームの制作</h4>
+                </div>
+                <div class="container" id="service02">
+                    <a href="./light/light.html">
+                        <img src="./material/TGS2023.PNG" alt="アイコン" width="100%" height="auto"></a>
+                    <h4>ライトを使用したゲームの制作</h4>
+                </div>
+                <div class="container" id="service03">
+                    <a href="./meishi/meishi.html">
+                        <img src="./material/meishi.png" alt="アイコン" width="100%" height="auto"></a>
+                    <h4>名刺の制作</h4>
+                </div>
+                <div class="container" id="service01">
+                    <a href="./pic1/pic1.html">
+                        <img src="./material/pic1.jpeg" alt="Bottle Bullet" width="100%" height="auto"></a>
+                    <h4>島根の秘境駅の写真</h4>
+                </div>
+                <div class="container" id="service01">
+                    <a href="./pic2/pic2.html">
+                        <img src="./material/hanabi2.jpg" alt="Bottle Bullet" width="100%" height="auto">
+                    </a>
+                    <h4>花火の写真</h4>
+                </div>
+                <div class="container" id="service01">
+                    <a href="./web/index.html">
+                        <img src="./material/webdeza.png" alt="Bottle Bullet" width="100%" height="auto"></a>
+                    <h4>架空のWebサイトの制作</h4>
+                </div>
+            </div>
+        </section>
+        <footer class="popup">
+            <div class="color-box" id="back">
+                <h4>Contact</h4>
+                <a href="mailto:x22037xx@aitech.ac.jp" class="contact-link">x22037xx@aitech.ac.jp</a>
+                <div id="sen3"></div>
+                <p>©︎2023 Ryunosuke Koketsu.</p>
+                <ul>
+                    <li>
+                        <a id="insta" href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
+                                height="50px">
+                                <path
+                                    d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a id="twitter" href="http://x.com" target="_blank" rel="noopener noreferrer">
+                            <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
+                                height="50px">
+                                <path
+                                    d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z" />
+                            </svg>
+
+                        </a>
+                    </li>
+                </ul>
+                <a href="#top" id="topButton">トップへ</a>
+            </div>
+
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
     </body>
 
 </html>
